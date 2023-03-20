@@ -2,112 +2,602 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trade_pair/core/app_colors/colors.dart';
 
-class AppTextStyle {
-  static const String fontFamily = "Montserrat";
 
-  static TextStyle body26w6 = TextStyle(
-      fontSize: 26.sp,
-      fontWeight: FontWeight.w600,
-      fontFamily: fontFamily,
-      color: AppColors.primaryColor);
+abstract class AppTextStyles {
+  const AppTextStyles._();
 
-  // static TextStyle body36w6 = TextStyle(
-  //     fontSize: 36.sp,
-  //     fontWeight: FontWeight.w600,
-  //     fontFamily: fontFamily,
-  //     color: AppColors.primaryColor);
-  static TextStyle body20w6 = TextStyle(
-      fontSize: 20.sp,
-      fontWeight: FontWeight.w600,
+  static const String fontFamily = 'Rubik';
+
+  static TextStyle head29w7 = TextStyle(
       fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 29.sp,
       color: AppColors.textColor);
-// static TextStyle body48w6 = TextStyle(
-//     fontSize: 48.sp,
-//     fontWeight: FontWeight.w600,
-//     fontFamily: fontFamily,
-//     color: AppTheme.text);
-// static TextStyle body40w6 = TextStyle(
-//     fontSize: 40.sp,
-//     fontWeight: FontWeight.w600,
-//     fontFamily: fontFamily,
-//     color: AppTheme.text);
-// static TextStyle body30w6 = TextStyle(
-//     fontSize: 30.sp,
-//     fontWeight: FontWeight.w600,
-//     fontFamily: fontFamily,
-//     color: AppTheme.text);
-// static TextStyle body30w4 = TextStyle(
-//     fontSize: 30.sp,
-//     fontWeight: FontWeight.w400,
-//     fontFamily: fontFamily,
-//     color: AppTheme.text);
-// static TextStyle body36w7 = TextStyle(
-//     fontSize: 36.sp,
-//     fontWeight: FontWeight.w700,
-//     fontFamily: fontFamily,
-//     color: AppTheme.text);
-// static TextStyle body36w6 = TextStyle(
-//     fontSize: 36.sp,
-//     fontWeight: FontWeight.w600,
-//     fontFamily: fontFamily,
-//     color: AppTheme.text);
-// static TextStyle body90w6 = TextStyle(
-//     fontSize: 90.sp,
-//     fontWeight: FontWeight.w600,
-//     fontFamily: fontFamily,
-//     color: AppTheme.text);
-//
-// static TextStyle body24w5 = TextStyle(
-//   fontSize: 24.sp,
-//   fontWeight: FontWeight.w500,
-//   color: AppTheme.text,
-//   fontFamily: fontFamily,
-// );
-// static TextStyle body18w6 = TextStyle(
-//   fontSize: 18.sp,
-//   fontWeight: FontWeight.w600,
-//   color: AppTheme.text,
-//   fontFamily: fFMon,
-// );
-// static TextStyle body24w6 = TextStyle(
-//   fontSize: 24.sp,
-//   fontWeight: FontWeight.w600,
-//   color: AppTheme.text,
-//   fontFamily: fontFamily,
-// );
-//
-// static TextStyle body24w4 = TextStyle(
-//   fontSize: 24.sp,
-//   fontWeight: FontWeight.w400,
-//   color: AppTheme.text,
-//   fontFamily: fontFamily,
-// );
-// static TextStyle body30w7 = TextStyle(
-//   fontSize: 30.sp,
-//   fontWeight: FontWeight.w700,
-//   color: AppTheme.text,
-//   fontFamily: fontFamily,
-// );
-}
+  static TextStyle head32w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 32.sp,
+      color: AppColors.textColor);
+  static TextStyle head32w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
+      fontStyle: FontStyle.normal,
+      fontSize: 32.sp,
+      color: AppColors.textColor);
+  static TextStyle head32w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 32.sp,
+      color: AppColors.textColor);
 
-class AppDecoration {
-  static ButtonStyle buttonStyle = ElevatedButton.styleFrom(
-      backgroundColor: Colors.white,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.r),
-          side: BorderSide(color: AppColors.primaryColor)),
-      side: BorderSide(width: 2.h, color: AppColors.primaryColor));
+  static TextStyle head84w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 84.sp,
+      color: AppColors.textColor);
 
-// static BoxDecoration decoration = BoxDecoration(
-//   color: AppTheme.fillColor,
-//   borderRadius: BorderRadius.circular(18.r),
-//   border: Border.all(color: AppTheme.keyboardBorderColor, width: 4.w),
-// );
-//
-}
+  static TextStyle head40w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 40.sp,
+      color: AppColors.textColor);
 
-class AppImages {
-  // static String playIcon = "assets/icons/play_icon.svg";
-  static String shoir = "assets/images/shoir.png";
-  static String bg = "assets/images/bg.jpg";
+  static TextStyle head36w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 36.sp,
+      color: AppColors.textColor);
+  static TextStyle head38w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 38.sp,
+      color: AppColors.textColor);
+
+  static TextStyle head25w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 25.sp,
+      color: AppColors.textColor);
+
+  static TextStyle head21w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 21.sp,
+      color: AppColors.textColor);
+
+  static TextStyle head16wB = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.bold,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor);
+
+  static TextStyle head15w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 15.sp,
+      color: AppColors.textColor);
+  static TextStyle head30w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 30.sp,
+      color: AppColors.textColor);
+  static TextStyle head30w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 30.sp,
+      color: AppColors.textColor);
+
+  static TextStyle head12wB = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.bold,
+      fontStyle: FontStyle.normal,
+      fontSize: 12.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body19w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 19.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body92w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 92.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body40w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 40.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body19w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 19.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body18w3 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w300,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body18w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body18w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body18w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor);
+  static TextStyle body18w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor);
+  static TextStyle body18w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body16w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body16w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body16w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body10w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 10.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body8w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 8.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body10w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 10.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body10w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 10.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body37w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 37.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body16w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body12w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 12.sp,
+      color: AppColors.textColor);
+  static TextStyle body6w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 6.sp,
+      color: AppColors.textColor);
+  static TextStyle body7w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 7.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body12w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 12.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body11w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 11.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body11w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 11.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body11w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 11.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body16w3 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w300,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body15w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 15.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body16w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body15w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 15.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body15w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 15.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body15w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 15.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body13w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 13.sp,
+      color: AppColors.textColor);
+  static TextStyle body13w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 13.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body13w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 13.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body13w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 13.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body14w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body14w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body14w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body14w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body14w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body14w3 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w300,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body17w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 17.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body17w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 17.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body17w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 17.sp,
+      color: AppColors.textColor);
+  static TextStyle body17w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 17.sp,
+      color: AppColors.textColor);
+  static TextStyle body17w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
+      fontStyle: FontStyle.normal,
+      fontSize: 17.sp,
+      color: AppColors.textColor);
+  static TextStyle body17w3 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w300,
+      fontStyle: FontStyle.normal,
+      fontSize: 17.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body12w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 12.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body9w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 9.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body9w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 9.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body20w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 20.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body20w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 20.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body20w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 20.sp,
+      color: AppColors.textColor);
+
+  static TextStyle b5DemiBold = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 15.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body20wB = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.bold,
+      fontStyle: FontStyle.normal,
+      fontSize: 20.sp,
+      color: AppColors.textColor);
+
+  static TextStyle b6DemiBold = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body29w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 29.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body29w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 29.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body24wB = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 24.sp,
+      color: AppColors.textColor);
+  static TextStyle body24w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 24.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body24w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 24.sp,
+      color: AppColors.textColor);
+  static TextStyle body25w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 25.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body26w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 26.sp,
+      color: AppColors.textColor);
+  static TextStyle body26w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
+      fontStyle: FontStyle.normal,
+      fontSize: 26.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body22w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 22.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body22w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 22.sp,
+      color: AppColors.textColor);
+
+  static TextStyle body22w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 22.sp,
+      color: AppColors.textColor);
+
+  static TextStyle b3Medium = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor);
+
+  static TextStyle b4Medium = TextStyle(
+    fontFamily: fontFamily,
+    fontWeight: FontWeight.w500,
+    fontStyle: FontStyle.normal,
+    fontSize: 13.sp,
+    color: AppColors.textColor,
+  );
+
+  static TextStyle b4Regular = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 13.sp,
+      color: AppColors.textColor);
+
+  static TextStyle b5Regular = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 15.sp,
+      color: AppColors.textColor);
 }
