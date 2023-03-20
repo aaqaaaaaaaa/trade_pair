@@ -1,10 +1,9 @@
 import 'package:animated_segmented_tab_control/animated_segmented_tab_control.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trade_pair/core/app_colors/app_text_style.dart';
 import 'package:trade_pair/core/app_colors/colors.dart';
-import 'package:trade_pair/pages/home/presentation/pages/trade_page.dart';
+import 'package:trade_pair/pages/trade/presentation/pages/trade_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,6 +25,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         backgroundColor: AppColors.backgroundColor,
         body: SafeArea(
           child: Container(
+            margin: EdgeInsets.only(top: 16.h),
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
@@ -43,13 +43,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   textStyle: AppTextStyles.body14w7,
                   tabs: [
                     SegmentTab(
-                      label: 'Charts',
-                      color: AppColors.selectedGreyColor,
-                    ),
+                        label: 'Charts', color: AppColors.selectedGreyColor),
                     SegmentTab(
-                      label: 'Trade',
-                      color: AppColors.selectedGreyColor,
-                    ),
+                        label: 'Trade', color: AppColors.selectedGreyColor),
                   ],
                 ),
                 Flexible(
@@ -59,8 +55,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       Container(
                         color: AppColors.selectedGreyColor,
                       ),
-                      TradePage(),
-
+                      const TradePage(),
                     ],
                   ),
                 ),

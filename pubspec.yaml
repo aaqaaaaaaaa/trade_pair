@@ -40,6 +40,8 @@ dependencies:
   flutter_screenutil: ^5.6.1
   animated_segmented_tab_control: ^1.0.1
   group_button: ^5.2.2
+  syncfusion_flutter_charts: ^20.4.54
+  intl: ^0.18.0
 
 
 dev_dependencies:
