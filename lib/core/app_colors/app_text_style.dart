@@ -7,6 +7,7 @@ abstract class AppTextStyles {
   const AppTextStyles._();
 
   static const String fontFamily = 'Rubik';
+  static const String fontGothic = 'GothicA1';
 
   static TextStyle head29w7 = TextStyle(
       fontFamily: fontFamily,
